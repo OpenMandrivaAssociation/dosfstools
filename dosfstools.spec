@@ -1,6 +1,6 @@
 %define	name	dosfstools
 %define	version	2.11
-%define release	%mkrel 3
+%define release	%mkrel 4
 
 Summary:	Utilities to create and check MS-DOS FAT filesystems
 Name:		%{name}
@@ -12,6 +12,7 @@ Patch0:		dosfstools-2.7-argfix.patch
 Patch1:		dosfstools-2.11-assumeKernel26.patch
 Patch2:		dosfstools-2.11-lseek.patch
 Patch3:		dosfstools-2.11-fortify.patch
+Patch4:		dosfstools-2.11-label.patch
 License:	GPL
 URL:		ftp://ftp.uni-erlangen.de/pub/Linux/LOCAL/dosfstools
 Group:		File tools
@@ -32,9 +33,10 @@ code.
 %patch1 -p1 -b .assumeKernel26
 %patch2 -p1 -b .lseek
 %patch3 -p1 -b .fortify
+%patch4 -p1
 
 %build
-%make PREFIX=%{_prefix} CFLAGS="$RPM_OPT_FLAGS -Dllseek=lseek64 -D_LARGEFILE64_SOURCE"
+%make PREFIX=%{_prefix} CFLAGS="$RPM_OPT_FLAGS -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -58,6 +60,7 @@ rm -r $RPM_BUILD_ROOT
 /sbin/mkfs.msdos
 /sbin/mkfs.vfat
 /sbin/dosfsck
+/sbin/dosfslabel
 %{_mandir}/man8/*
 
 
