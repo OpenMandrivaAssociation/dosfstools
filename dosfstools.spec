@@ -1,6 +1,6 @@
 %define	name	dosfstools
 %define	version	2.11
-%define release	%mkrel 4
+%define release	%mkrel 5
 
 Summary:	Utilities to create and check MS-DOS FAT filesystems
 Name:		%{name}
@@ -33,7 +33,7 @@ code.
 %patch1 -p1 -b .assumeKernel26
 %patch2 -p1 -b .lseek
 %patch3 -p1 -b .fortify
-%patch4 -p1
+%patch4 -p1 -b .label
 
 %build
 %make PREFIX=%{_prefix} CFLAGS="$RPM_OPT_FLAGS -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64"
