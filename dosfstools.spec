@@ -18,6 +18,7 @@ URL:		ftp://ftp.uni-erlangen.de/pub/Linux/LOCAL/dosfstools
 Group:		File tools
 Obsoletes:	mkdosfs-ygg
 Provides:	mkdosfs-ygg = %{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Inside of this package there are two utilities to create and to
