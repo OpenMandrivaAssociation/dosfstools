@@ -46,7 +46,7 @@ rm -r $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
-%doc CHANGES TODO README.fsck README.mkdos
+%doc CHANGES TODO README.fsck README.mkdosfs
 /sbin/mkdosfs
 /sbin/mkfs.msdos
 /sbin/mkfs.vfat
