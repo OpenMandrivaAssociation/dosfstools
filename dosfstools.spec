@@ -1,6 +1,6 @@
 %define	name	dosfstools
 %define	version	2.11
-%define release	%mkrel 6
+%define release	%mkrel 7
 
 Summary:	Utilities to create and check MS-DOS FAT filesystems
 Name:		%{name}
@@ -41,23 +41,17 @@ cp dosfsck/README README.fsck
 cp mkdosfs/README README.mkdosfs
 %makeinstall PREFIX=$RPM_BUILD_ROOT MANDIR=$RPM_BUILD_ROOT%{_mandir}/man8
 
-# as stated below, /sbin/fsck.* are not included in %files.
-#
-# Remove this link because for initscripts to don't have a fsck in a vfat
-# -- Use dosfsck luke --
-rm -rf ${RPM_BUILD_ROOT}/sbin/{fsck.msdos,fsck.vfat}
-
 %clean
 rm -r $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
-%doc CHANGES TODO README.fsck README.mkdosfs dosfsck/COPYING
+%doc CHANGES TODO README.fsck README.mkdos
 /sbin/mkdosfs
 /sbin/mkfs.msdos
 /sbin/mkfs.vfat
+/sbin/fsck.msdos
+/sbin/fsck.vfat
 /sbin/dosfsck
 /sbin/dosfslabel
 %{_mandir}/man8/*
-
-
