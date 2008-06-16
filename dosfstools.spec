@@ -1,6 +1,6 @@
 %define	name	dosfstools
 %define	version	2.11
-%define release	%mkrel 7
+%define release	%mkrel 8
 
 Summary:	Utilities to create and check MS-DOS FAT filesystems
 Name:		%{name}
