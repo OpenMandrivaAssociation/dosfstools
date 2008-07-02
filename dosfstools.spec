@@ -1,11 +1,7 @@
-%define	name	dosfstools
-%define	version	2.11
-%define release	%mkrel 8
-
 Summary:	Utilities to create and check MS-DOS FAT filesystems
-Name:		%{name}
-Version:        %{version}
-Release:        %{release}
+Name:		dosfstools
+Version:        2.11
+Release:        %mkrel 9
 Source0:	ftp://ftp.uni-erlangen.de/pub/Linux/LOCAL/dosfstools/%{name}-%{version}.src.tar.bz2
 Patch0:		dosfstools-2.7-argfix.patch
 Patch1:		dosfstools-2.11-assumeKernel26.patch
