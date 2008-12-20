@@ -1,7 +1,7 @@
 Summary:	Utilities to create and check MS-DOS FAT filesystems
 Name:		dosfstools
 Version:        2.11
-Release:        %mkrel 9
+Release:        %mkrel 10
 Source0:	ftp://ftp.uni-erlangen.de/pub/Linux/LOCAL/dosfstools/%{name}-%{version}.src.tar.bz2
 Patch0:		dosfstools-2.7-argfix.patch
 Patch1:		dosfstools-2.11-assumeKernel26.patch
@@ -22,8 +22,9 @@ format of DOS 3.3+ as well as provides a default dummy boot sector
 code.
 
 %prep
+
 %setup -q
-%patch0 -p1 -b .argfix
+%patch0 -p0 -b .argfix
 %patch1 -p1 -b .assumeKernel26
 %patch3 -p1 -b .fortify
 %patch4 -p1 -b .label
