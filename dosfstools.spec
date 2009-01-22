@@ -1,12 +1,13 @@
 Summary:	Utilities to create and check MS-DOS FAT filesystems
 Name:		dosfstools
 Version:        2.11
-Release:        %mkrel 10
+Release:        %mkrel 11
 Source0:	ftp://ftp.uni-erlangen.de/pub/Linux/LOCAL/dosfstools/%{name}-%{version}.src.tar.bz2
 Patch0:		dosfstools-2.7-argfix.patch
 Patch1:		dosfstools-2.11-assumeKernel26.patch
 Patch3:		dosfstools-2.11-fortify.patch
 Patch4:		dosfstools-2.11-label.patch
+Patch5:		dosfstools-2.11-label-error.patch
 License:	GPL
 URL:		ftp://ftp.uni-erlangen.de/pub/Linux/LOCAL/dosfstools
 Group:		File tools
@@ -28,6 +29,7 @@ code.
 %patch1 -p1 -b .assumeKernel26
 %patch3 -p1 -b .fortify
 %patch4 -p1 -b .label
+%patch5 -p1 -b .labelerror
 
 %build
 %make PREFIX=%{_prefix} CFLAGS="$RPM_OPT_FLAGS -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64"
