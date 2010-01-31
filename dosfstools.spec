@@ -1,6 +1,6 @@
 Summary:	Utilities to create and check MS-DOS FAT filesystems
 Name:		dosfstools
-Version:        3.0.8
+Version:        3.0.9
 Release:        %mkrel 1
 Source0:	http://www.daniel-baumann.ch/software/dosfstools/%{name}-%{version}.tar.bz2
 License:	GPLv3+
