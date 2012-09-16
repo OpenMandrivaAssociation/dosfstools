@@ -1,14 +1,13 @@
 Summary:	Utilities to create and check MS-DOS FAT filesystems
 Name:		dosfstools
-Version:        3.0.12
+Version:        3.0.13
 Release:        %mkrel 1
-Source0:	http://www.daniel-baumann.ch/software/dosfstools/%{name}-%{version}.tar.gz
+Source0:	http://www.daniel-baumann.ch/software/dosfstools/%{name}-%{version}.tar.bz2
 License:	GPLv3+
 URL:		http://www.daniel-baumann.ch/software/dosfstools/
 Group:		File tools
 Obsoletes:	mkdosfs-ygg
 Provides:	mkdosfs-ygg = %{version}
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Inside of this package there are two utilities to create and to
@@ -24,14 +23,9 @@ code.
 %make PREFIX=%{_prefix} CFLAGS="$RPM_OPT_FLAGS -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64"
 
 %install
-rm -rf %{buildroot}
 %make DESTDIR=%{buildroot} install-bin install-man PREFIX=%{_prefix} SBINDIR=/sbin
 
-%clean
-rm -fr %{buildroot}
-
 %files
-%defattr(-,root,root)
 %doc %doc ChangeLog doc/README.*
 /sbin/mkdosfs
 /sbin/mkfs.msdos
