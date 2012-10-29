@@ -6,8 +6,6 @@ Source0:	http://www.daniel-baumann.ch/software/dosfstools/%{name}-%{version}.tar
 License:	GPLv3+
 URL:		http://www.daniel-baumann.ch/software/dosfstools/
 Group:		File tools
-Obsoletes:	mkdosfs-ygg
-Provides:	mkdosfs-ygg = %{version}
 
 %description
 Inside of this package there are two utilities to create and to
