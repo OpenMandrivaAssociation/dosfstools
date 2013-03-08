@@ -2,8 +2,8 @@
 
 Summary:	Utilities to create and check MS-DOS FAT filesystems
 Name:		dosfstools
-Version:	3.0.13
-Release:	3
+Version:	3.0.16
+Release:	1
 Source0:	http://www.daniel-baumann.ch/software/dosfstools/%{name}-%{version}.tar.bz2
 License:	GPLv3+
 URL:		http://www.daniel-baumann.ch/software/dosfstools/
@@ -19,7 +19,7 @@ Linux.  This version uses the enhanced boot sector/superblock
 format of DOS 3.3+ as well as provides a default dummy boot sector
 code.
 
-
+%if %{with uclibc}
 %package -n	uclibc-%{name}
 Summary:	Utilities to create and check MS-DOS FAT filesystems (uClibc build)
 Group:		File tools
@@ -30,6 +30,7 @@ check MS-DOS FAT filesystems on either harddisks or floppies under
 Linux.  This version uses the enhanced boot sector/superblock
 format of DOS 3.3+ as well as provides a default dummy boot sector
 code.
+%endif
 
 %prep
 %setup -q
