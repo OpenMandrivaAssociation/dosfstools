@@ -3,5 +3,6 @@ removed_sources:
   dosfstools-3.0.20.tar.gz: 4adff979842db0dcf8824043bad98ef76d4cb004
   dosfstools-3.0.21.tar.gz: aad96b727103220be1291e35ab00c58c63f0e606
   dosfstools-3.0.22.tar.gz: 551df06e035e4069745768945c17b7353e2ac748
-sources:
   dosfstools-3.0.23.tar.gz: af610eb72b21be3b257cff79ad22f256c89639de
+sources:
+  dosfstools-3.0.25.tar.gz: 054ca2a1ab15550aae137d5b51a207a5b89095d5
