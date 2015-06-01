@@ -2,12 +2,12 @@
 
 Summary:	Utilities to create and check MS-DOS FAT filesystems
 Name:		dosfstools
-Version:	3.0.22
-Release:	2
+Version:	3.0.26
+Release:	0.1
 License:	GPLv3+
 Group:		File tools
 Url:		http://www.daniel-baumann.ch/software/dosfstools/
-Source0:	http://daniel-baumann.ch/files/software/dosfstools/%{name}-%{version}.tar.gz
+Source0:	http://daniel-baumann.ch/files/software/dosfstools/%{name}-%{version}.tar.xz
 %if %{with uclibc}
 BuildRequires:	uClibc-devel >= 0.9.33.2-15
 %endif
