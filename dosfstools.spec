@@ -38,4 +38,3 @@ code.
 /sbin/dosfsck
 /sbin/dosfslabel
 %{_mandir}/man8/*
-%{_mandir}/de/man8/*
