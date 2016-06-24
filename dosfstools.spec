@@ -5,7 +5,7 @@ Release:	1
 License:	GPLv3+
 Group:		File tools
 Url:		https://github.com/dosfstools/dosfstools
-Source0:	https://github.com/dosfstools/dosfstools%{name}-%{version}.tar.xz
+Source0:	https://github.com/dosfstools/dosfstools/%{name}-%{version}.tar.xz
 
 %description
 Inside of this package there are two utilities to create and to
