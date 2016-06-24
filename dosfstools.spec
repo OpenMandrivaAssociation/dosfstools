@@ -19,7 +19,7 @@ code.
 %setup -q
 
 %build
-%configure --enable-compat-symlinks
+%configure --sbindir=/sbin --enable-compat-symlinks
 %make CFLAGS="%{optflags} -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64" CC=%{__cc}
 
 %install
