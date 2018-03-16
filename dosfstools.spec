@@ -26,7 +26,7 @@ code.
 %makeinstall_std
 
 %files
-%doc %doc ChangeLog doc/README.*
+%doc %{_docdir}/%{name}
 /sbin/mkdosfs
 /sbin/mkfs.msdos
 /sbin/mkfs.vfat
