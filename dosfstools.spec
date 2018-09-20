@@ -1,7 +1,7 @@
 Summary:	Utilities to create and check MS-DOS FAT filesystems
 Name:		dosfstools
 Version:	4.1
-Release:	1
+Release:	2
 License:	GPLv3+
 Group:		File tools
 Url:		https://github.com/dosfstools/dosfstools
@@ -16,14 +16,14 @@ format of DOS 3.3+ as well as provides a default dummy boot sector
 code.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
 %configure --sbindir=/sbin --enable-compat-symlinks
-%make CFLAGS="%{optflags} -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64" CC=%{__cc}
+%make_build CFLAGS="%{optflags} -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64" CC=%{__cc}
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc %{_docdir}/%{name}
