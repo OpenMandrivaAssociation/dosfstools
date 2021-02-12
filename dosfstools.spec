@@ -1,14 +1,14 @@
 Summary:	Utilities to create and check MS-DOS FAT filesystems
 Name:		dosfstools
-Version:	4.1
+Version:	4.2
 Release:	4
 License:	GPLv3+
 Group:		File tools
 Url:		https://github.com/dosfstools/dosfstools
-Source0:	https://github.com/dosfstools/dosfstools/%{name}-%{version}.tar.xz
+Source0:        http://github.com/%{name}/%{name}/releases/download/v%{version}/%{name}-%{version}.tar.gz
 # https://github.com/dosfstools/dosfstools/issues/111
-Patch0: dosfstools-4.1-fix-cluster-size-auto-detect-for-4k-disks.patch 
 BuildRequires:  pkgconfig(libudev)
+BuildRequires:  gettext-devel
 
 %description
 Inside of this package there are two utilities to create and to
