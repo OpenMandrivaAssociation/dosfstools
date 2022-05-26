@@ -1,14 +1,14 @@
 Summary:	Utilities to create and check MS-DOS FAT filesystems
 Name:		dosfstools
 Version:	4.2
-Release:	4
+Release:	5
 License:	GPLv3+
 Group:		File tools
 Url:		https://github.com/dosfstools/dosfstools
-Source0:        http://github.com/%{name}/%{name}/releases/download/v%{version}/%{name}-%{version}.tar.gz
+Source0:	http://github.com/%{name}/%{name}/releases/download/v%{version}/%{name}-%{version}.tar.gz
 # https://github.com/dosfstools/dosfstools/issues/111
-BuildRequires:  pkgconfig(libudev)
-BuildRequires:  gettext-devel
+BuildRequires:	pkgconfig(libudev)
+BuildRequires:	gettext-devel
 
 %description
 Inside of this package there are two utilities to create and to
@@ -21,22 +21,15 @@ code.
 %autosetup -p1
 
 %build
-%configure --sbindir=/sbin --enable-compat-symlinks
-%make_build CFLAGS="%{optflags} -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64" CC=%{__cc}
+%configure \
+	--enable-compat-symlinks
+
+%make_build CFLAGS="%{optflags} -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Oz" CC=%{__cc}
 
 %install
 %make_install
 
 %files
 %doc %{_docdir}/%{name}
-/sbin/mkdosfs
-/sbin/mkfs.msdos
-/sbin/mkfs.vfat
-/sbin/fatlabel
-/sbin/fsck.fat
-/sbin/mkfs.fat
-/sbin/fsck.msdos
-/sbin/fsck.vfat
-/sbin/dosfsck
-/sbin/dosfslabel
-%{_mandir}/man8/*
+%{_sbindir}/*
+%doc %{_mandir}/man8/*
