@@ -1,7 +1,12 @@
+%ifnarch %{riscv}
+# (tpg) optimize it a bit
+%global optflags %{optflags} -Oz --rtlib=compiler-rt
+%endif
+
 Summary:	Utilities to create and check MS-DOS FAT filesystems
 Name:		dosfstools
 Version:	4.2
-Release:	6
+Release:	7
 License:	GPLv3+
 Group:		File tools
 Url:		https://github.com/dosfstools/dosfstools
