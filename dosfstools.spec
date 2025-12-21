@@ -12,6 +12,11 @@ Group:		File tools
 Url:		https://github.com/dosfstools/dosfstools
 Source0:	http://github.com/%{name}/%{name}/releases/download/v%{version}/%{name}-%{version}.tar.gz
 # https://github.com/dosfstools/dosfstools/issues/111
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(libudev)
 BuildRequires:	gettext-devel
 
