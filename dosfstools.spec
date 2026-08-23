@@ -14,7 +14,6 @@ Source0:	http://github.com/%{name}/%{name}/releases/download/v%{version}/%{name}
 # https://github.com/dosfstools/dosfstools/issues/111
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libtool-base
 BuildRequires:	slibtool
 BuildRequires:	make
 BuildRequires:	pkgconfig(libudev)
