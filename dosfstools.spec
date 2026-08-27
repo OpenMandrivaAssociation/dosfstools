@@ -6,7 +6,7 @@
 Summary:	Utilities to create and check MS-DOS FAT filesystems
 Name:		dosfstools
 Version:	4.2
-Release:	8
+Release:	9
 License:	GPLv3+
 Group:		File tools
 Url:		https://github.com/dosfstools/dosfstools
@@ -33,7 +33,7 @@ code.
 %configure \
 	--enable-compat-symlinks
 
-%make_build CFLAGS="%{optflags} -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Oz" CC=%{__cc}
+%make_build CFLAGS="%{optflags} -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Oz" CC="%{__cc}"
 
 %install
 %make_install
